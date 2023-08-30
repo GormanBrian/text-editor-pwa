@@ -1,13 +1,21 @@
 const butInstall = document.getElementById("buttonInstall");
 
+let installPrompt = null;
+
 // Logic for installing the PWA
 window.addEventListener("beforeinstallprompt", (event) => {
   event.preventDefault();
+  installPrompt = event;
   butInstall.style.visibility = "visible";
 });
 
 butInstall.addEventListener("click", async (event) => {
-  event.prompt();
+  if (!installPrompt) {
+    return;
+  }
+
+  const result = await installPrompt.prompt();
+  installPrompt = null;
   butInstall.setAttribute("disabled", true);
   butInstall.textContent = "Installed!";
 });
