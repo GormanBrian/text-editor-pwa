@@ -1,7 +1,7 @@
 {
-  "name": "JATE",
+  "name": "text-editor-pwa",
   "version": "1.0.0",
-  "description": "",
+  "description": "Text Editor progressive web application",
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "npm run build && cd server && node server.js",
@@ -10,11 +10,14 @@
     "install": "cd server && npm i && cd ../client && npm i",
     "client": "cd client && npm start"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Express",
+    "Babel",
+    "Webpack"
+  ],
+  "author": "Brian Gorman",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
     "if-env": "^1.0.4"
   },
   "devDependencies": {
