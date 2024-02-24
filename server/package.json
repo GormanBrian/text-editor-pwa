@@ -1,18 +1,19 @@
 {
-    "name": "JATE",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-        "server": "nodemon server.js --ignore client"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "express": "^4.17.1"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.4"
-    }
+  "name": "jate-server",
+  "description": "JATE server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js --ignore client",
+    "server": "node server.js --ignore client"
+  },
+  "author": "Brian Gorman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }

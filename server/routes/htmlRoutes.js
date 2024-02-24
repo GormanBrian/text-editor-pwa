@@ -1,6 +1,8 @@
-const path = require('path');
+import path from "path";
 
-module.exports = (app) =>
-  app.get('/', (req, res) =>
-    res.sendFile(path.join(__dirname, '../client/dist/index.html'))
+const htmlRoutes = (app) =>
+  app.get("/", (_, res) =>
+    res.sendFile(path.join(__dirname, "../client/dist/index.html"))
   );
+
+export default htmlRoutes;
